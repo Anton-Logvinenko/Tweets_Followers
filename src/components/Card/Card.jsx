@@ -1,13 +1,14 @@
 import css from './Card.module.css';
 import imgTweet from '../../images/TweetPicBG.png';
 import logo from '../../images/Logo.png';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import { folowUser } from '../../operation/fetchData';
 export const Card = ({ userData }) => {
-  const { user, followers, tweets, avatar } = userData;
+  const { id, user, followers, tweets, avatar, clickFollowers } = userData;
 
   const [follow, setFollower] = useState(followers);
-  const [value, setValue] = useState(true);
+  const [value, setValue] = useState(clickFollowers);
+
 
   const heandelClick = () => {
     if (value) {
@@ -17,8 +18,23 @@ export const Card = ({ userData }) => {
       setFollower(prevState => prevState - 1);
       setValue(true);
     }
+
   };
-  const declineFollow = (follow / 1000).toFixed(3).replace(/\./g, ',');
+
+  useEffect(() => {
+      async function updateApi() {
+    try {
+      await folowUser({ id, follow,value });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  updateApi();
+  }, [id, follow,value ]);
+
+ 
+
+  const folowUI = follow.toLocaleString('en-US');
 
   return (
     <>
@@ -35,7 +51,7 @@ export const Card = ({ userData }) => {
         <div className={css.tweetsBox}>
           <p className={css.text}>{`TWEETS ${tweets}`}</p>
           <p className={`${css.text} ${css.text_margin} `}>
-            {`FOLLOWERS ${declineFollow}`}
+            {`FOLLOWERS ${folowUI}`}
           </p>
           <button
             className={`${css.btn} ${!value && css.btn_active}`}
