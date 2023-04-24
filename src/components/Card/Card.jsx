@@ -3,22 +3,22 @@ import imgTweet from '../../images/TweetPicBG.png';
 import logo from '../../images/Logo.png';
 import { useState } from 'react';
 
-
 export const Card = ({ userData }) => {
-  const { user,followers, tweets, avatar } = userData;
+  const { user, followers, tweets, avatar } = userData;
 
- const[follow, setFollower] =useState(followers)
- const[value, setValue] =useState(true)
+  const [follow, setFollower] = useState(followers);
+  const [value, setValue] = useState(true);
 
-const heandelClick=()=>{
-
-  if(value){setFollower(follow+1);
-    console.log(value)
-    setValue(false) } 
-  else{setFollower(follow-1); setValue(true)}
-}
-   const declineFollow =(follow/1000).toFixed(3).replace(/\./g, ',')
-
+  const heandelClick = () => {
+    if (value) {
+      setFollower(prevState => prevState + 1);
+      setValue(false);
+    } else {
+      setFollower(prevState => prevState - 1);
+      setValue(true);
+    }
+  };
+  const declineFollow = (follow / 1000).toFixed(3).replace(/\./g, ',');
 
   return (
     <>
@@ -29,7 +29,7 @@ const heandelClick=()=>{
         </div>
         <div className={css.rectangle}></div>
         <div className={css.ellipse}>
-       <img className={css.imgUser} src={avatar} alt={user} width={80} />
+          <img className={css.imgUser} src={avatar} alt={user} width={80} />
         </div>
 
         <div className={css.tweetsBox}>
@@ -37,12 +37,15 @@ const heandelClick=()=>{
           <p className={`${css.text} ${css.text_margin} `}>
             {`FOLLOWERS ${declineFollow}`}
           </p>
-          <button className={`${css.btn} ${!value && css.btn_active}`} type="button" onClick={heandelClick}>
-          {value ?'FOLLOW':'FOLLOWING'}
+          <button
+            className={`${css.btn} ${!value && css.btn_active}`}
+            type="button"
+            onClick={heandelClick}
+          >
+            {value ? 'FOLLOW' : 'FOLLOWING'}
           </button>
         </div>
       </div>
     </>
   );
 };
-

@@ -4,8 +4,7 @@ import { Card } from '../Card/Card';
 import { fetchData } from '../../operation/fetchData';
 import css from './CardList.module.css';
 export const CardList = () => {
-  const [users, setUsers] = useState([]);
-  const [showUsers, setShowUsers] = useState(users);
+  const [showUsers, setShowUsers] = useState([]);
   const [num, setNum] = useState(3);
 console.log(showUsers)
  
@@ -13,9 +12,7 @@ console.log(showUsers)
     async function getUsers() {
       try {
         const userData = await fetchData();
-        console.log('userData', userData);
-        setUsers(userData);
-        setShowUsers(userData.slice(0,num))
+         setShowUsers(userData.slice(0,num))
       } catch (error) {
         console.log(error);
       }
