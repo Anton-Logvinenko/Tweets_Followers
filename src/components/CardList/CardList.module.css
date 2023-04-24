@@ -1,0 +1,13 @@
+.cardConteiner {
+  width: 1200px;
+}
+
+.list {
+    display: flex;
+   gap: 50px;
+
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
