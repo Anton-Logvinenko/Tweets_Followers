@@ -1,8 +1,9 @@
 import axios from "axios";
 const baseURL = 'https://64455e9f914c816083cd410d.mockapi.io/tweets';
 
-export  async function fetchData (){
-const response= await axios.get(`${baseURL}`)
+export  async function fetchData (page){
+const response= await axios.get(`${baseURL}?page=${page}&limit=3`)
+console.log('resp', response.data)
 return response.data
 }
 
@@ -12,6 +13,6 @@ export  async function folowUser ({id, follow,value}){
                 followers: follow,
                 clickFollowers: value,
       })
-    console.log('resp', response.data)
+   
     return response.data
     }

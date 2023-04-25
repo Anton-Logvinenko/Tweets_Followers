@@ -1,33 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Card } from '../Card/Card';
 
 import { fetchData } from '../../operation/fetchData';
 import css from './CardList.module.css';
 export const CardList = () => {
   const [showUsers, setShowUsers] = useState([]);
-  const [num, setNum] = useState(3);
+  const [page, setPage] = useState(1);
+
+  const effectRan = useRef(false);
  
-  console.log(showUsers);
 
   useEffect(() => {
-    async function getUsers() {
+    if (effectRan.current) {  async function getUsers() {
       try {
-        const userData = await fetchData();
-        const idObj = userData.reduce(
-          (acc, {id}) => ({ ...acc, [id]:true }),
-          {}
-        );
-        console.log('idObj', idObj)
-        setShowUsers(userData.slice(0, num));
+        const userData = await fetchData(page);
+        setShowUsers(prevState => [...prevState, ...userData]);
       } catch (error) {
         console.log(error);
       }
     }
     getUsers();
-  }, [num]);
-  
+        }
+    return()=> effectRan.current = true
+  }, [page]);
+
   const onClick = () => {
-    setNum(prevState => prevState + 3);
+    setPage(prevState => prevState + 1);
   };
 
   return (
@@ -39,9 +37,11 @@ export const CardList = () => {
           </li>
         ))}
       </ul>
-      {showUsers.length >=3 && <button className={css.btn} type="button" onClick={onClick}>
-        Load more
-      </button>}
+      {showUsers.length >= 3 && (
+        <button className={css.btn} type="button" onClick={onClick}>
+          Load more
+        </button>
+      )}
     </div>
   );
 };
