@@ -7,11 +7,12 @@ export const CardList = () => {
   const [showUsers, setShowUsers] = useState([]);
   const [page, setPage] = useState(1);
 
-  const effectRan = useRef(false);
+  // const effectRan = useRef(false);
  
 
   useEffect(() => {
-    if (effectRan.current) {  async function getUsers() {
+    // if (effectRan.current) 
+      async function getUsers() {
       try {
         const userData = await fetchData(page);
         setShowUsers(prevState => [...prevState, ...userData]);
@@ -20,8 +21,8 @@ export const CardList = () => {
       }
     }
     getUsers();
-        }
-    return()=> effectRan.current = true
+        
+    // return()=> effectRan.current = true
   }, [page]);
 
   const onClick = () => {

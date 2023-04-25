@@ -1,3 +1,8 @@
+.conteiner{
+  display: flex;
+gap: 50px;
+}
+
 .link {
 display: inline-block;
   margin-top: 20px;
@@ -15,4 +20,9 @@ display: inline-block;
 }
 .link:hover {
   background: #5cd3a8;
+}
+
+.dropdown{
+  width: 100px;
+background-color: #5cd3a8;
 }
