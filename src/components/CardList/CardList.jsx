@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card } from '../Card/Card';
 
 import { fetchData } from '../../operation/fetchData';
