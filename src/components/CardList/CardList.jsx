@@ -4,8 +4,9 @@ import { Card } from '../Card/Card';
 import { fetchData } from '../../operation/fetchData';
 import css from './CardList.module.css';
 export const CardList = () => {
-  const [showUsers, setShowUsers] = useState( []);
+  const [showUsers, setShowUsers] = useState([]);
   const [num, setNum] = useState(3);
+ 
   console.log(showUsers);
 
   useEffect(() => {
@@ -38,9 +39,9 @@ export const CardList = () => {
           </li>
         ))}
       </ul>
-      <button className={css.btn} type="button" onClick={onClick}>
+      {showUsers.length >=3 && <button className={css.btn} type="button" onClick={onClick}>
         Load more
-      </button>
+      </button>}
     </div>
   );
 };

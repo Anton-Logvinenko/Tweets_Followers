@@ -1,20 +1,24 @@
 .cardConteiner {
+  margin: 50px auto;
   width: 1240px;
   height: 100vh;
 }
 
 .list {
-    display: flex;
-    flex-wrap: wrap;
-   gap: 50px;
-
-
+  display: flex;
+  flex-wrap: wrap;
+gap: 50px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   list-style: none;
-  margin: 0;
   padding: 0;
+ 
+
 }
 
 .btn {
+  display: block;
+  margin: 0 auto;
   width: 196px;
   padding: 10px 10px;
   font-family: 'Montserrat', sans-serif;
@@ -26,9 +30,7 @@
   background: #ebd8ff;
   box-shadow: 0px 3.44px 3.44px rgba(0, 0, 0, 0.25);
   border-radius: 10.31px;
-
-  
 }
 .btn:hover {
-  background: #5CD3A8;
+  background: #5cd3a8;
 }

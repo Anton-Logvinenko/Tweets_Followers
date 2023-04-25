@@ -1,5 +1,6 @@
 import css from './Card.module.css';
 import imgTweet from '../../images/TweetPicBG.png';
+import ellipse from '../../images/Ellipse.png'
 import logo from '../../images/Logo.png';
 import { useEffect, useState } from 'react';
 import { folowUser } from '../../operation/fetchData';
@@ -9,7 +10,7 @@ export const Card = ({ userData }) => {
   const [follow, setFollower] = useState(followers);
   const [value, setValue] = useState(clickFollowers);
 
-
+  
   const heandelClick = () => {
     if (value) {
       setFollower(prevState => prevState + 1);
@@ -44,9 +45,10 @@ export const Card = ({ userData }) => {
           <img src={imgTweet} alt="Comics-cloud" width="308" />
         </div>
         <div className={css.rectangle}></div>
+        <img className={css.imgAllipse} src={ellipse} alt={'ellipse'} width={95} />
         <div className={css.ellipse}>
           <img className={css.imgUser} src={avatar} alt={user} width={80} />
-        </div>
+                 </div>
 
         <div className={css.tweetsBox}>
           <p className={css.text}>{`TWEETS ${tweets}`}</p>
