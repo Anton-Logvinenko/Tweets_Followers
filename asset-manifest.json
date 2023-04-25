@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/Tweets_Followers/static/css/main.bc14a93c.css",
-    "main.js": "/Tweets_Followers/static/js/main.aa1f78f5.js",
+    "main.js": "/Tweets_Followers/static/js/main.fd7460d4.js",
     "static/css/9.46bc3b47.chunk.css": "/Tweets_Followers/static/css/9.46bc3b47.chunk.css",
-    "static/js/9.7bbbb1c0.chunk.js": "/Tweets_Followers/static/js/9.7bbbb1c0.chunk.js",
+    "static/js/9.43b6038a.chunk.js": "/Tweets_Followers/static/js/9.43b6038a.chunk.js",
     "static/css/502.af84c66f.chunk.css": "/Tweets_Followers/static/css/502.af84c66f.chunk.css",
-    "static/js/502.98d15016.chunk.js": "/Tweets_Followers/static/js/502.98d15016.chunk.js",
+    "static/js/502.cf998ee7.chunk.js": "/Tweets_Followers/static/js/502.cf998ee7.chunk.js",
     "static/css/101.a2fee85b.chunk.css": "/Tweets_Followers/static/css/101.a2fee85b.chunk.css",
     "static/js/101.c3e42d20.chunk.js": "/Tweets_Followers/static/js/101.c3e42d20.chunk.js",
-    "static/js/79.1123ccfe.chunk.js": "/Tweets_Followers/static/js/79.1123ccfe.chunk.js",
+    "static/js/279.e961c51e.chunk.js": "/Tweets_Followers/static/js/279.e961c51e.chunk.js",
     "static/media/BG.jpg": "/Tweets_Followers/static/media/BG.84b7e583e0b475751751.jpg",
     "static/media/404.jpg": "/Tweets_Followers/static/media/404.5f7e45c45bcf5e2a76fd.jpg",
     "static/media/TweetPicBG.png": "/Tweets_Followers/static/media/TweetPicBG.b3d9942b3f9d5dad1ff0.png",
     "index.html": "/Tweets_Followers/index.html",
     "main.bc14a93c.css.map": "/Tweets_Followers/static/css/main.bc14a93c.css.map",
-    "main.aa1f78f5.js.map": "/Tweets_Followers/static/js/main.aa1f78f5.js.map",
+    "main.fd7460d4.js.map": "/Tweets_Followers/static/js/main.fd7460d4.js.map",
     "9.46bc3b47.chunk.css.map": "/Tweets_Followers/static/css/9.46bc3b47.chunk.css.map",
-    "9.7bbbb1c0.chunk.js.map": "/Tweets_Followers/static/js/9.7bbbb1c0.chunk.js.map",
+    "9.43b6038a.chunk.js.map": "/Tweets_Followers/static/js/9.43b6038a.chunk.js.map",
     "502.af84c66f.chunk.css.map": "/Tweets_Followers/static/css/502.af84c66f.chunk.css.map",
-    "502.98d15016.chunk.js.map": "/Tweets_Followers/static/js/502.98d15016.chunk.js.map",
+    "502.cf998ee7.chunk.js.map": "/Tweets_Followers/static/js/502.cf998ee7.chunk.js.map",
     "101.a2fee85b.chunk.css.map": "/Tweets_Followers/static/css/101.a2fee85b.chunk.css.map",
     "101.c3e42d20.chunk.js.map": "/Tweets_Followers/static/js/101.c3e42d20.chunk.js.map",
-    "79.1123ccfe.chunk.js.map": "/Tweets_Followers/static/js/79.1123ccfe.chunk.js.map"
+    "279.e961c51e.chunk.js.map": "/Tweets_Followers/static/js/279.e961c51e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc14a93c.css",
-    "static/js/main.aa1f78f5.js"
+    "static/js/main.fd7460d4.js"
   ]
 }

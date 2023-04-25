@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkTweets_Followers=self.webpackChunkTweets_Followers||[]).push([[9],{9:function(e,s,t){t.r(s),t.d(s,{default:function(){return l}});var o=t(87),n="HomePage_conteiner__TD+AL",r="HomePage_text__NuIjC",a="HomePage_link__X6Os5",c=t(184);function l(){return(0,c.jsxs)("div",{className:n,children:[(0,c.jsxs)("p",{className:r,children:["Welcome to the ",(0,c.jsx)("br",{}),' "Home page"! ',(0,c.jsx)("br",{})," You can go to the:"]}),(0,c.jsx)(o.rU,{className:a,to:"/tweets",children:"TWEETS"})]})}}}]);
-//# sourceMappingURL=9.7bbbb1c0.chunk.js.map
