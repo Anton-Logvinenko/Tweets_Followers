@@ -1,15 +1,20 @@
+.cardListBox{
+  display: flex;
+  margin:0;
+}
 .cardConteiner {
   margin: 50px auto;
-  width: 1240px;
+  width: 1400px;
   height: 100vh;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
-gap: 50px;
+  justify-content: center;
+gap: 20px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   list-style: none;
   padding: 0;
  
@@ -29,6 +34,7 @@ gap: 50px;
   background: #ebd8ff;
   box-shadow: 0px 3.44px 3.44px rgba(0, 0, 0, 0.25);
   border-radius: 10.31px;
+  cursor: pointer;
 }
 .btn:hover {
   background: #5cd3a8;

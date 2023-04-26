@@ -112,7 +112,8 @@ export const CardList = () => {
   };
 
   return (
-    <>
+   <div className={css.cardListBox}
+   >
       <Filter
         clickAll={handelClickAll}
         clickFollowing={handelClickFollowing}
@@ -132,6 +133,6 @@ export const CardList = () => {
           </button>
         )}
       </div>
-    </>
+      </div>
   );
 };
