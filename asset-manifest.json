@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/Tweets_Followers/static/css/main.bc14a93c.css",
-    "main.js": "/Tweets_Followers/static/js/main.b7fe3284.js",
+    "main.js": "/Tweets_Followers/static/js/main.956356c4.js",
     "static/css/9.46bc3b47.chunk.css": "/Tweets_Followers/static/css/9.46bc3b47.chunk.css",
     "static/js/9.43b6038a.chunk.js": "/Tweets_Followers/static/js/9.43b6038a.chunk.js",
-    "static/css/932.08f96cc4.chunk.css": "/Tweets_Followers/static/css/932.08f96cc4.chunk.css",
-    "static/js/932.fa7a94f6.chunk.js": "/Tweets_Followers/static/js/932.fa7a94f6.chunk.js",
+    "static/css/932.e48a7c3d.chunk.css": "/Tweets_Followers/static/css/932.e48a7c3d.chunk.css",
+    "static/js/932.c7d85cb7.chunk.js": "/Tweets_Followers/static/js/932.c7d85cb7.chunk.js",
     "static/css/101.a2fee85b.chunk.css": "/Tweets_Followers/static/css/101.a2fee85b.chunk.css",
     "static/js/101.c3e42d20.chunk.js": "/Tweets_Followers/static/js/101.c3e42d20.chunk.js",
     "static/js/279.53c37551.chunk.js": "/Tweets_Followers/static/js/279.53c37551.chunk.js",
@@ -15,17 +15,17 @@
     "static/media/TweetPicBG2.png": "/Tweets_Followers/static/media/TweetPicBG2.1d449cd1fcbc40bb872d.png",
     "index.html": "/Tweets_Followers/index.html",
     "main.bc14a93c.css.map": "/Tweets_Followers/static/css/main.bc14a93c.css.map",
-    "main.b7fe3284.js.map": "/Tweets_Followers/static/js/main.b7fe3284.js.map",
+    "main.956356c4.js.map": "/Tweets_Followers/static/js/main.956356c4.js.map",
     "9.46bc3b47.chunk.css.map": "/Tweets_Followers/static/css/9.46bc3b47.chunk.css.map",
     "9.43b6038a.chunk.js.map": "/Tweets_Followers/static/js/9.43b6038a.chunk.js.map",
-    "932.08f96cc4.chunk.css.map": "/Tweets_Followers/static/css/932.08f96cc4.chunk.css.map",
-    "932.fa7a94f6.chunk.js.map": "/Tweets_Followers/static/js/932.fa7a94f6.chunk.js.map",
+    "932.e48a7c3d.chunk.css.map": "/Tweets_Followers/static/css/932.e48a7c3d.chunk.css.map",
+    "932.c7d85cb7.chunk.js.map": "/Tweets_Followers/static/js/932.c7d85cb7.chunk.js.map",
     "101.a2fee85b.chunk.css.map": "/Tweets_Followers/static/css/101.a2fee85b.chunk.css.map",
     "101.c3e42d20.chunk.js.map": "/Tweets_Followers/static/js/101.c3e42d20.chunk.js.map",
     "279.53c37551.chunk.js.map": "/Tweets_Followers/static/js/279.53c37551.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc14a93c.css",
-    "static/js/main.b7fe3284.js"
+    "static/js/main.956356c4.js"
   ]
 }
