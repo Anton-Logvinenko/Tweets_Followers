@@ -4,9 +4,10 @@ gap: 50px;
 }
 
 .link {
-display: inline-block;
+/* display: block; */
   margin-top: 20px;
   margin-left: 100px;
+  height:40px ;
   padding: 10px 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -22,7 +23,3 @@ display: inline-block;
   background: #5cd3a8;
 }
 
-.dropdown{
-  width: 100px;
-background-color: #5cd3a8;
-}
