@@ -1,17 +1,11 @@
 import { CardList } from '../../components/CardList/CardList';
 import { Link, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
-import Filter from '../../components/Filter/Filter'
-
 import css from './Tweets.module.css';
 
 export default function Tweets() {
 
  
-
-
-
-
   const location = useLocation();
   const backLocationLink = useRef(location.state?.from ?? '/');
   return (
@@ -20,8 +14,7 @@ export default function Tweets() {
       <Link className={css.link} to={backLocationLink.current}>
         Go back
       </Link>
-  
-      </div>
+        </div>
       <CardList />
     </div>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card } from '../Card/Card';
+import { Filter } from '../Filter/Filter';
 
 import {
   fetchData,
@@ -10,7 +11,7 @@ import {
   fetchFollowPagges,
 } from '../../operation/fetchData';
 import css from './CardList.module.css';
-import { Filter } from '../Filter/Filter';
+
 export const CardList = () => {
   const [showUsers, setShowUsers] = useState([]);
   const [page, setPage] = useState(1);
@@ -18,31 +19,18 @@ export const CardList = () => {
   const [clickFollowing, setClickFollowing] = useState(false);
   const [clickFollow, setClickFollow] = useState(false);
 
-
-  console.log('showUsers', showUsers);
-
   // ALL pages
-
   useEffect(() => {
     if (clickFollowing || clickFollow) {
       return;
     }
-    async function countAllPages() {
-      const data = await fetchAllpage();
-      const allPagesData = Math.ceil(data.length / 3);
-      setAllPage(allPagesData);
-      console.log('allPages', allPagesData);
-    }
-    countAllPages();
-  }, [clickFollowing, clickFollow]);
-
-  useEffect(() => {
-    if (clickFollowing || clickFollow) {
-      return;
-    }
-   
     async function getUsers() {
       try {
+             const data = await fetchAllpage();
+        const allPagesData = Math.ceil(data.length / 3);
+        setAllPage(allPagesData);
+
+
         const userData = await fetchData(page);
         setShowUsers(prevState => [...prevState, ...userData]);
       } catch (error) {
@@ -53,25 +41,17 @@ export const CardList = () => {
   }, [page, clickFollowing, clickFollow]);
 
   // Following pages
-  useEffect(() => {
-    if (!clickFollowing || clickFollow) {
-      return;
-    }
-    async function countAllPages() {
-      const data = await fetchFollowingPagges();
-      const allPagesData = Math.ceil(data.length / 3);
-      setAllPage(allPagesData);
-      console.log('allPages', allPagesData);
-    }
-    countAllPages();
-  }, [clickFollowing, clickFollow]);
-
+  
   useEffect(() => {
     if (!clickFollowing || clickFollow) {
       return;
     }
     async function getUsersFollowing() {
       try {
+        const data = await fetchFollowingPagges();
+        const allPagesData = Math.ceil(data.length / 3);
+        setAllPage(allPagesData);
+       
         const userData = await fetchFollowing(page);
         setShowUsers(prevState => [...prevState, ...userData]);
       } catch (error) {
@@ -86,21 +66,12 @@ export const CardList = () => {
     if (!clickFollow) {
       return;
     }
-    async function countAllPages() {
-      const data = await fetchFollowPagges();
-      const allPagesData = Math.ceil(data.length / 3);
-      setAllPage(allPagesData);
-      console.log('allPages', allPagesData);
-    }
-    countAllPages();
-  }, [clickFollow]);
-
-  useEffect(() => {
-    if (!clickFollow) {
-      return;
-    }
     async function getUsersFollow() {
       try {
+        const data = await fetchFollowPagges();
+        const allPagesData = Math.ceil(data.length / 3);
+        setAllPage(allPagesData);
+
         const userData = await fetchFollow(page);
         setShowUsers(prevState => [...prevState, ...userData]);
       } catch (error) {
@@ -110,23 +81,24 @@ export const CardList = () => {
     getUsersFollow();
   }, [page, clickFollow]);
 
+
   const handelClickAll = () => {
+    if (!clickFollowing && !clickFollow) {
+      return;
+    }
     setShowUsers([]);
     setClickFollowing(false);
     setClickFollow(false);
     setPage(1);
     setAllPage(null);
   };
-
   const handelClickFollow = () => {
     setShowUsers([]);
     setClickFollowing(false);
     setClickFollow(true);
     setPage(1);
     setAllPage(null);
-
   };
-
   const handelClickFollowing = () => {
     setShowUsers([]);
     setClickFollowing(true);
